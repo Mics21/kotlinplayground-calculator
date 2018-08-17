@@ -1,7 +1,9 @@
 package de.lostmekka.kotlinplayground.calculator
 
+import de.mics21.kotlinplayground.parser.Parser
+
 class Calculator : ICalculator {
     override fun evaluate(formula: String): Double {
-        TODO("implement me! :)")
+        return Parser(formula).parse().evaluate()
     }
 }
